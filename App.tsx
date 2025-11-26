@@ -325,7 +325,7 @@ export default function App() {
                     onClick={() => setState(prev => ({...prev, modelTier: state.modelTier === 'pro' ? 'flash' : 'pro'}))}
                     className={`text-[9px] uppercase tracking-[0.2em] px-3 py-1 rounded-full border transition-all ${state.modelTier === 'pro' ? 'border-indigo-500/30 text-indigo-300 bg-indigo-500/5' : 'border-emerald-500/30 text-emerald-300 bg-emerald-500/5'}`}
                  >
-                    {state.modelTier === 'pro' ? 'Gemini 3 Pro' : 'Flash 2.5'}
+                    {state.modelTier === 'pro' ? 'Flash 2.5' : 'Flash 2.5'}
                  </button>
              </div>
              
