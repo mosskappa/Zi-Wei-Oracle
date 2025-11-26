@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zi Wei Oracle - AI Fortune Telling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Noto Serif TC"', 'serif'],
+              display: ['"Cinzel"', 'serif'],
+              sans: ['"Inter"', 'sans-serif'],
+            },
+            colors: {
+              midnight: {
+                950: '#020617', // Darkest Blue/Black
+                900: '#0f172a', // Deep Blue
+                800: '#1e293b', 
+              },
+              imperial: {
+                900: '#2e1065', // Royal Purple
+                800: '#581c87',
+                700: '#6b21a8',
+                100: '#f3e8ff',
+              },
+              gold: {
+                500: '#eab308',
+                400: '#facc15',
+                300: '#fde047',
+                100: '#fef9c3',
+              },
+              // Compatibility aliases
+              mystic: { 950: '#020617', 900: '#0f172a', 850: '#1e293b', 800: '#334155', 200: '#e2e8f0', 100: '#f1f5f9' },
+              neon: { purple: '#a855f7', blue: '#3b82f6', pink: '#ec4899', green: '#10b981', amber: '#f59e0b', red: '#ef4444' }
+            },
+            boxShadow: {
+              'glow-purple': '0 0 15px rgba(168, 85, 247, 0.3)',
+              'glow-gold': '0 0 15px rgba(234, 179, 8, 0.2)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.6s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'drift': 'drift 20s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              drift: {
+                '0%': { transform: 'translate(0, 0)' },
+                '100%': { transform: 'translate(10px, 15px)' },
+              }
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background: #020617; /* Midnight 950 */
+        color: #f3e8ff; /* Imperial 100 */
+        font-family: 'Noto Serif TC', serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(88, 28, 135, 0.4); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(147, 51, 234, 0.6); }
+      ::selection { background: rgba(168, 85, 247, 0.3); color: #fff; text-shadow: 0 0 8px rgba(168, 85, 247, 0.6); }
+      .glow-text { text-shadow: 0 0 10px currentColor; }
+      .mask-linear-fade { mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^9.0.1",
+    "remark-gfm": "https://aistudiocdn.com/remark-gfm@^4.0.0",
+    "@heroicons/react/": "https://aistudiocdn.com/@heroicons/react@^2.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "url": "https://aistudiocdn.com/url@^0.11.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
