@@ -5,7 +5,7 @@ const API_KEY = process.env.API_KEY;
 
 // CRITICAL: Model Definitions
 const MODELS = {
-  pro: 'gemini-3-pro-preview', 
+  pro: 'gemini-2.5-flash', 
   flash: 'gemini-2.5-flash'
 };
 
